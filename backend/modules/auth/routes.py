@@ -42,6 +42,7 @@ def get_current_user_id():
     token = auth_header.split(' ')[1]
     try:
         payload = jwt.decode(token, os.getenv('JWT_SECRET_KEY'), algorithms=['HS256'])
-        return payload.get('user_id')
+        user_id = payload.get('user_id') or payload.get('id')
+        return user_id
     except (jwt.ExpiredSignatureError, jwt.InvalidTokenError):
         return None

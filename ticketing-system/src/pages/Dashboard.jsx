@@ -22,7 +22,7 @@ export default function Dashboard() {
     const handleSubmit = async () => {
         const token = getToken();
         try {
-            await axios.post(`${BACKEND_URL}/api/issues/create_ticket`, { title, category, department, description },
+            await axios.post(`${BACKEND_URL}/api/issues/create_ticket`, { title, category, description },
                 {
                     headers: {
                         'Content-Type': 'application/json',
