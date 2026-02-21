@@ -18,6 +18,7 @@ class AuthService:
             result = check_password_hash(user['password'], password)
             if result:
                 payload = {
+                    'user_id': user['user_id'],
                     'email': user['email'],
                     'exp': datetime.utcnow() + timedelta(days=1)
                 }

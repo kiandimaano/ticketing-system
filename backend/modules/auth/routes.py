@@ -1,3 +1,5 @@
+import os
+import jwt
 from flask import Blueprint, request, redirect, session, url_for, jsonify
 from functools import wraps
 from .repository import AuthRepository
@@ -31,3 +33,15 @@ def login():
         except ValueError as e:
             return jsonify({'message': str(e)}), 400
     return jsonify({'message': 'Invalid request method'}), 405
+
+def get_current_user_id():
+    """Get user_id from JWT in Authorization header"""
+    auth_header = request.headers.get('Authorization')
+    if not auth_header or not auth_header.startswith('Bearer '):
+        return None
+    token = auth_header.split(' ')[1]
+    try:
+        payload = jwt.decode(token, os.getenv('JWT_SECRET_KEY'), algorithms=['HS256'])
+        return payload.get('user_id')
+    except (jwt.ExpiredSignatureError, jwt.InvalidTokenError):
+        return None
