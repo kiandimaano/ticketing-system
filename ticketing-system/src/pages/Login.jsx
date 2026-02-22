@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { setToken } from '../services/storage';
+import { setToken, setRole } from '../services/storage';
 import { AlertDestructive } from "@/components/ui/alert-destructive"
 
 export default function Login() {
@@ -23,6 +23,9 @@ export default function Login() {
             if (response.status === 200) {
                 if (response.data?.token) {
                     setToken(response.data.token);
+                }
+                if (response.data?.role) {
+                    setRole(response.data.role);
                 }
                 navigate('/dashboard');
             }

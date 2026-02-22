@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { getToken } from '@/services/storage';
 import Sidebar, { SidebarMobileHeader } from '@/components/ui/Sidebar';
+import { DialogModal } from '@/components/ui/DialogModal';
 import {
   Ticket as TicketIcon,
   Calendar,
@@ -30,16 +31,20 @@ const statusStyles = {
     'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400 border-emerald-200 dark:border-emerald-800',
 };
 
-function formatDate(isoString) {
-  if (isoString == null || isoString === '') return '—';
-  const d = new Date(isoString);
+function formatDate(submittedAt) {
+  if (submittedAt == null || submittedAt === '') return '—';
+  // Normalize MySQL-style "YYYY-MM-DD HH:MM:SS" so it parses as local time consistently
+  const normalized = String(submittedAt).replace(' ', 'T');
+  const d = new Date(normalized);
   if (Number.isNaN(d.getTime())) return '—';
+  const dateStr = d.toLocaleDateString([], { day: 'numeric', month: 'short', year: 'numeric' });
+  const timeStr = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   const now = new Date();
+  const sameDay = now.getFullYear() === d.getFullYear() && now.getMonth() === d.getMonth() && now.getDate() === d.getDate();
   const diffDays = Math.floor((now - d) / (1000 * 60 * 60 * 24));
-  if (diffDays === 0) return 'Today, ' + d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  if (diffDays === 1) return 'Yesterday';
-  if (diffDays < 7) return d.toLocaleDateString([], { weekday: 'short' });
-  return d.toLocaleDateString([], { day: 'numeric', month: 'short', year: 'numeric' });
+  if (sameDay) return `Today, ${timeStr}`;
+  if (diffDays === 1) return `Yesterday, ${timeStr}`;
+  return `${dateStr}, ${timeStr}`;
 }
 
 export default function Tickets() {
@@ -50,6 +55,7 @@ export default function Tickets() {
   const [tickets, setTickets] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [detailTicket, setDetailTicket] = useState(null);
 
   useEffect(() => {
     async function loadTickets() {
@@ -69,8 +75,10 @@ export default function Tickets() {
           id: t.id ?? t.ticket_id,
           title: t.title,
           category: t.category,
+          department: t.department ?? '',
           status: t.status ?? 'open',
           description: t.description,
+          submittedBy: t.submitted_by ?? t.submittedBy,
           createdAt: t.createdAt ?? t.submitted_at ?? t.created_at,
         }));
         setTickets(list);
@@ -249,6 +257,7 @@ export default function Tickets() {
                     <div className="flex shrink-0 items-center gap-2">
                       <button
                         type="button"
+                        onClick={() => setDetailTicket(ticket)}
                         className="inline-flex items-center gap-1.5 rounded-lg border border-input bg-background px-3 py-2 text-sm font-medium text-foreground hover:bg-muted/50 focus:outline-none focus:ring-2 focus:ring-ring"
                       >
                         <MessageSquare className="size-4" aria-hidden />
@@ -260,6 +269,65 @@ export default function Tickets() {
               ))
             )}
           </div>
+
+          <DialogModal
+            open={!!detailTicket}
+            onOpenChange={(open) => !open && setDetailTicket(null)}
+            title={detailTicket ? `Ticket #${detailTicket.id}` : 'Ticket details'}
+            description={detailTicket?.title ?? ''}
+          >
+            {detailTicket && (
+              <dl className="space-y-4 text-sm">
+                <div>
+                  <dt className="font-medium text-muted-foreground">Ticket ID</dt>
+                  <dd className="mt-0.5 font-mono">{detailTicket.id}</dd>
+                </div>
+                <div>
+                  <dt className="font-medium text-muted-foreground">Title</dt>
+                  <dd className="mt-0.5">{detailTicket.title}</dd>
+                </div>
+                <div>
+                  <dt className="font-medium text-muted-foreground">Category</dt>
+                  <dd className="mt-0.5">{detailTicket.category}</dd>
+                </div>
+                {detailTicket.department != null && detailTicket.department !== '' && (
+                  <div>
+                    <dt className="font-medium text-muted-foreground">Department</dt>
+                    <dd className="mt-0.5">{detailTicket.department}</dd>
+                  </div>
+                )}
+                <div>
+                  <dt className="font-medium text-muted-foreground">Status</dt>
+                  <dd className="mt-0.5">
+                    <span
+                      className={cn(
+                        'inline-flex rounded-full border px-2.5 py-0.5 text-xs font-medium',
+                        statusStyles[detailTicket.status]
+                      )}
+                    >
+                      {detailTicket.status === 'in_progress'
+                        ? 'In Progress'
+                        : detailTicket.status === 'open'
+                          ? 'Open'
+                          : 'Resolved'}
+                    </span>
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-medium text-muted-foreground">Description</dt>
+                  <dd className="mt-0.5 whitespace-pre-wrap text-foreground">{detailTicket.description}</dd>
+                </div>
+                <div>
+                  <dt className="font-medium text-muted-foreground">Submitted by</dt>
+                  <dd className="mt-0.5">{detailTicket.submittedBy != null ? `User #${detailTicket.submittedBy}` : '—'}</dd>
+                </div>
+                <div>
+                  <dt className="font-medium text-muted-foreground">Submitted at</dt>
+                  <dd className="mt-0.5">{formatDate(detailTicket.createdAt)}</dd>
+                </div>
+              </dl>
+            )}
+          </DialogModal>
         </main>
       </div>
     </div>

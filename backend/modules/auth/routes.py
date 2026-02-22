@@ -27,22 +27,30 @@ def login():
         if not data or 'email' not in data or 'password' not in data:
             return jsonify({'message': 'Email and password required'}), 400
         try:
-            user = service.login(data['email'], data['password'])
-            token = user['token']
-            return jsonify({'message': 'Login successful', 'token': token}), 200
+            result = service.login(data['email'], data['password'])
+            token = result['token']
+            role = result.get('role', 'user')
+            return jsonify({'message': 'Login successful', 'token': token, 'role': role}), 200
         except ValueError as e:
             return jsonify({'message': str(e)}), 400
     return jsonify({'message': 'Invalid request method'}), 405
 
-def get_current_user_id():
-    """Get user_id from JWT in Authorization header"""
+def _get_jwt_payload():
+    """Decode JWT from Authorization header; returns payload dict or None."""
     auth_header = request.headers.get('Authorization')
     if not auth_header or not auth_header.startswith('Bearer '):
         return None
     token = auth_header.split(' ')[1]
     try:
-        payload = jwt.decode(token, os.getenv('JWT_SECRET_KEY'), algorithms=['HS256'])
-        user_id = payload.get('user_id') or payload.get('id')
-        return user_id
+        return jwt.decode(token, os.getenv('JWT_SECRET_KEY'), algorithms=['HS256'])
     except (jwt.ExpiredSignatureError, jwt.InvalidTokenError):
         return None
+
+def get_current_user_id():
+    """Get user_id from JWT in Authorization header"""
+    payload = _get_jwt_payload()
+    return (payload.get('user_id') or payload.get('id')) if payload else None
+
+def get_current_user_role():
+    payload = _get_jwt_payload()
+    return payload.get('role') if payload else None

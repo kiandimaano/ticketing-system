@@ -1,7 +1,7 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Ticket, Settings, X, Menu, LogOut } from 'lucide-react';
+import { LayoutDashboard, Ticket, Settings, X, Menu, Users, LogOut } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { removeToken } from '@/services/storage';
+import { removeToken, getRole } from '@/services/storage';
 
 /**
  * Mobile header with menu button and page title. Use in the main content area
@@ -31,6 +31,7 @@ const defaultNavItems = [
   { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { to: '/tickets', label: 'Tickets', icon: Ticket },
   { to: '/settings', label: 'Settings', icon: Settings },
+  { to: '/manage-users', label: 'Manage Users', icon: Users }
 ];
 
 /**
@@ -45,7 +46,14 @@ const defaultNavItems = [
  * @param {boolean} [props.isOpen] - When true on small screens, sidebar overlay is visible
  * @param {() => void} [props.onClose] - Callback to close sidebar (e.g. when backdrop or link clicked)
  */
-export default function Sidebar({ navItems = defaultNavItems, className, children, isOpen = false, onClose }) {
+const navItemsForRole = () => {
+  const role = getRole();
+  if (role === 'admin') return defaultNavItems;
+  return defaultNavItems.filter((item) => item.to !== '/manage-users');
+};
+
+export default function Sidebar({ navItems, className, children, isOpen = false, onClose }) {
+  const effectiveNavItems = navItems ?? navItemsForRole();
   const isOverlay = typeof onClose === 'function';
   const navigate = useNavigate();
 
@@ -117,7 +125,7 @@ export default function Sidebar({ navItems = defaultNavItems, className, childre
             Menu
           </span>
           <nav className="flex flex-col gap-0.5" aria-label="Main">
-            {navItems.map(({ to, label, icon: Icon }) => (
+            {effectiveNavItems.map(({ to, label, icon: Icon }) => (
               <NavLink
                 key={to}
                 to={to}
