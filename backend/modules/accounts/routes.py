@@ -25,3 +25,22 @@ def get_all_users():
         except Exception as e:
             return jsonify({'message': str(e)}), 500
     return jsonify({'message': 'Invalid request method'}), 405
+
+@accounts_bp.route('/edit_user', methods=['PATCH'])
+def edit_user():
+    if request.method == 'PATCH':
+        data = request.get_json()
+        if not data or 'user_id' not in data:
+            return jsonify({'message': 'Missing required fields'}), 400
+        
+        try:
+            service.edit_user(
+                user_id=data['user_id'],
+                username=data.get('username'),
+                email=data.get('email'),
+                role=data.get('role'),
+            )
+            return jsonify({'message': 'User edited successfully'}), 200
+        except Exception as e:
+            return jsonify({'message': str(e)}), 500
+    return jsonify({'message': 'Invalid request method'}), 405
