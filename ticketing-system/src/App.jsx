@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard.jsx';
 import Tickets from './pages/Tickets.jsx';
 import Settings from './pages/Settings.jsx';
 import ManageUsers from './pages/ManageUsers.jsx';
+import AdminTickets from './pages/AdminTickets.jsx';
 
 export const ProtectedRoute = () => {
   if (!getToken()) {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/tickets" element={<Tickets />} />
           <Route path="/settings" element={<Settings />} />
           <Route element={<AdminRoute />}>
+            <Route path="/admin-tickets" element={<AdminTickets />} />
             <Route path="/manage-users" element={<ManageUsers />} />
           </Route>
         </Route>

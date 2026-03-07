@@ -11,3 +11,6 @@ class IssueService:
         if user_id != submitted_by:
             raise ValueError('Unauthorized access')
         return self.issue_repo.get_all_user_tickets(submitted_by)
+
+    def get_all_tickets(self):
+        return self.issue_repo.get_all_tickets()

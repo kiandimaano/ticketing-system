@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 from .repository import IssueRepository
 from .service import IssueService
 from database.database import db_pool
-from modules.auth.routes import get_current_user_id
+from modules.auth.routes import get_current_user_id, get_current_user_role
 from datetime import datetime
 
 issues_bp = Blueprint('issues', __name__)
@@ -54,6 +54,26 @@ def get_all_user_tickets():
 
         try:
             rows = service.get_all_user_tickets(user_id, user_id)
+            tickets = [ticket_to_json(r) for r in rows]
+            return jsonify({'message': 'Tickets fetched successfully', 'tickets': tickets}), 200
+        except Exception as e:
+            return jsonify({'message': str(e)}), 500
+    return jsonify({'message': 'Invalid request method'}), 405
+
+
+@issues_bp.route('/get_all_tickets', methods=['GET'])
+def get_all_tickets():
+    """Admin-only: returns all tickets from all users."""
+    if request.method == 'GET':
+        user_id = get_current_user_id()
+        role = get_current_user_role()
+        if not user_id:
+            return jsonify({'message': 'Authentication required'}), 401
+        if role != 'admin':
+            return jsonify({'message': 'Unauthorized access'}), 403
+
+        try:
+            rows = service.get_all_tickets()
             tickets = [ticket_to_json(r) for r in rows]
             return jsonify({'message': 'Tickets fetched successfully', 'tickets': tickets}), 200
         except Exception as e:

@@ -28,3 +28,17 @@ class IssueRepository:
         finally:
             conn.close()
         return result
+
+    def get_all_tickets(self):
+        conn = self.db_pool.get_connection()
+        try:
+            cur = conn.cursor(dictionary=True)
+            try:
+                sql_query = "SELECT * FROM tickets ORDER BY submitted_at DESC"
+                cur.execute(sql_query)
+                result = cur.fetchall()
+            finally:
+                cur.close()
+        finally:
+            conn.close()
+        return result

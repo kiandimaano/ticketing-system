@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Ticket, Settings, X, Menu, Users, LogOut } from 'lucide-react';
+import { LayoutDashboard, Ticket, Settings, X, Menu, Users, LogOut, ClipboardList } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { removeToken, getRole } from '@/services/storage';
 
@@ -31,6 +31,7 @@ const defaultNavItems = [
   { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { to: '/tickets', label: 'Tickets', icon: Ticket },
   { to: '/settings', label: 'Settings', icon: Settings },
+  { to: '/admin-tickets', label: 'All Tickets', icon: ClipboardList },
   { to: '/manage-users', label: 'Manage Users', icon: Users }
 ];
 
@@ -49,7 +50,9 @@ const defaultNavItems = [
 const navItemsForRole = () => {
   const role = getRole();
   if (role === 'admin') return defaultNavItems;
-  return defaultNavItems.filter((item) => item.to !== '/manage-users');
+  return defaultNavItems.filter(
+    (item) => item.to !== '/manage-users' && item.to !== '/admin-tickets'
+  );
 };
 
 export default function Sidebar({ navItems, className, children, isOpen = false, onClose }) {
