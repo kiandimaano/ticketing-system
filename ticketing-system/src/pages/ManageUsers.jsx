@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Sidebar, { SidebarMobileHeader } from '@/components/ui/Sidebar';
+import { DialogModal } from '@/components/ui/DialogModal';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 import { Pencil, Trash2, Loader2, AlertCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { getToken } from '@/services/storage';
@@ -28,6 +31,10 @@ export default function ManageUsers() {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [editUser, setEditUser] = useState(null);
+  const [editForm, setEditForm] = useState({ username: '', email: '', role: 'user' });
+  const [editSaving, setEditSaving] = useState(false);
+  const [editError, setEditError] = useState(null);
 
   const toggleSelect = (id) => {
     setSelectedIds((prev) => {
@@ -43,38 +50,83 @@ export default function ManageUsers() {
     else setSelectedIds(new Set(users.map((u) => u.user_id)));
   };
 
-  useEffect(() => {
-    async function loadUsers() {
-      const token = getToken();
-      if (!token) {
-        setError('Authentication required');
-        setLoading(false);
-        return;
-      }
-      try {
-        setError(null);
-        const response = await axios.get(`${BACKEND_URL}/api/accounts/get_all_users`, {
-          headers: { Authorization: `Bearer ${token}` },
-        });
-        const raw = response.data?.users ?? [];
-        const list = (Array.isArray(raw) ? raw : []).map((u) => ({
-          user_id: u.user_id,
-          username: u.username,
-          email: u.email,
-          role: u.role,
-          created_at: u.created_at
-        }))
-        setUsers(list);
-      } catch (err) {
-        console.error('Failed to fetch users', err);
-        setError(err.response?.data?.message || 'Failed to fetch users');
-        setUsers([]);
-      } finally {
-        setLoading(false);
-      }
+  const loadUsers = async () => {
+    const token = getToken();
+    if (!token) {
+      setError('Authentication required');
+      setLoading(false);
+      return;
     }
+    try {
+      setError(null);
+      const response = await axios.get(`${BACKEND_URL}/api/accounts/get_all_users`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      const raw = response.data?.users ?? [];
+      const list = (Array.isArray(raw) ? raw : []).map((u) => ({
+        user_id: u.user_id,
+        username: u.username,
+        email: u.email,
+        role: u.role,
+        created_at: u.created_at
+      }));
+      setUsers(list);
+    } catch (err) {
+      console.error('Failed to fetch users', err);
+      setError(err.response?.data?.message || 'Failed to fetch users');
+      setUsers([]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    setLoading(true);
     loadUsers();
   }, []);
+
+  const handleOpenEdit = (user) => {
+    setEditUser(user);
+    setEditForm({
+      username: user.username ?? '',
+      email: user.email ?? '',
+      role: user.role ?? 'user',
+    });
+    setEditError(null);
+  };
+
+  const handleCloseEdit = () => {
+    setEditUser(null);
+    setEditError(null);
+  };
+
+  const handleSaveEdit = async () => {
+    if (!editUser) return;
+    const token = getToken();
+    if (!token) return;
+    setEditSaving(true);
+    setEditError(null);
+    try {
+      await axios.patch(
+        `${BACKEND_URL}/api/accounts/edit_user`,
+        {
+          user_id: editUser.user_id,
+          username: editForm.username.trim() || undefined,
+          email: editForm.email.trim() || undefined,
+          role: editForm.role || undefined,
+        },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+      handleCloseEdit();
+      setLoading(true);
+      await loadUsers();
+    } catch (err) {
+      console.error('Failed to edit user', err);
+      setEditError(err.response?.data?.message || 'Failed to edit user');
+    } finally {
+      setEditSaving(false);
+    }
+  };
 
   return (
     <div className="flex min-h-screen">
@@ -161,6 +213,7 @@ export default function ManageUsers() {
                           <div className="flex justify-end gap-1">
                             <button
                               type="button"
+                              onClick={() => handleOpenEdit(user)}
                               className="rounded p-1.5 text-muted-foreground hover:bg-muted hover:text-foreground"
                               title="Edit"
                             >
@@ -182,6 +235,90 @@ export default function ManageUsers() {
               </div>
             )}
           </div>
+
+          <DialogModal
+            open={!!editUser}
+            onOpenChange={(open) => !open && handleCloseEdit()}
+            title="Edit User"
+            description={editUser ? `Editing ${editUser.username}` : ''}
+            showFooter={false}
+            footer={
+              <div className="flex justify-end gap-2">
+                <Button
+                  variant="outline"
+                  onClick={handleCloseEdit}
+                  disabled={editSaving}
+                >
+                  Cancel
+                </Button>
+                <Button onClick={handleSaveEdit} disabled={editSaving}>
+                  {editSaving ? (
+                    <>
+                      <Loader2 className="size-4 animate-spin" aria-hidden />
+                      Saving…
+                    </>
+                  ) : (
+                    'Save'
+                  )}
+                </Button>
+              </div>
+            }
+          >
+            {editUser && (
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleSaveEdit();
+                }}
+                className="space-y-4"
+              >
+                {editError && (
+                  <p className="rounded-md bg-destructive/10 px-3 py-2 text-sm text-destructive">
+                    {editError}
+                  </p>
+                )}
+                <div>
+                  <label htmlFor="edit-username" className="mb-1.5 block text-sm font-medium text-foreground">
+                    Username
+                  </label>
+                  <Input
+                    id="edit-username"
+                    value={editForm.username}
+                    onChange={(e) => setEditForm((f) => ({ ...f, username: e.target.value }))}
+                    placeholder="Username"
+                    autoComplete="username"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="edit-email" className="mb-1.5 block text-sm font-medium text-foreground">
+                    Email
+                  </label>
+                  <Input
+                    id="edit-email"
+                    type="email"
+                    value={editForm.email}
+                    onChange={(e) => setEditForm((f) => ({ ...f, email: e.target.value }))}
+                    placeholder="Email"
+                    autoComplete="email"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="edit-role" className="mb-1.5 block text-sm font-medium text-foreground">
+                    Role
+                  </label>
+                  <select
+                    id="edit-role"
+                    value={editForm.role}
+                    onChange={(e) => setEditForm((f) => ({ ...f, role: e.target.value }))}
+                    className="h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] outline-none"
+                  >
+                    <option value="user">user</option>
+                    <option value="admin">admin</option>
+                  </select>
+                </div>
+              </form>
+            )}
+          </DialogModal>
         </main>
       </div>
     </div>
