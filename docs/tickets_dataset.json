@@ -1,0 +1,1910 @@
+[
+  {
+    "title": "Payroll server completely down",
+    "description": "The payroll server has been offline for 2 hours. Over 500 employees will not receive their salaries tomorrow if this is not resolved. Finance team is panicking.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Database corruption detected",
+    "description": "We are seeing corruption in the production database. Customer transaction data may be lost. Need immediate assistance.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Ransomware detected on file server",
+    "description": "Ransomware has encrypted files on the main file server. Multiple departments cannot access their documents. IT is isolating systems.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Cannot find my favorite font",
+    "description": "This is an EMERGENCY!!! I cannot find Comic Sans in the new design tool. I need it for my presentation today. Please help ASAP!",
+    "severity": "low",
+    "category": "Software"
+  },
+  {
+    "title": "Email server outage - nobody can send or receive",
+    "description": "The entire email system is down. No one in the company can send or receive emails. External clients cannot reach us.",
+    "severity": "critical",
+    "category": "Email"
+  },
+  {
+    "title": "VPN completely inaccessible",
+    "description": "VPN has been down for 3 hours. All remote workers cannot access any internal systems. Over 200 people are blocked.",
+    "severity": "critical",
+    "category": "Network"
+  },
+  {
+    "title": "Can we change the header color?",
+    "description": "Would it be possible to change the header color from blue to green? Not urgent, just a preference. Thanks!",
+    "severity": "low",
+    "category": "Software"
+  },
+  {
+    "title": "Login broken for half of users",
+    "description": "SSO login is failing for approximately 50% of users. They get an error and cannot access any applications. Started 30 minutes ago.",
+    "severity": "high",
+    "category": "Access Request"
+  },
+  {
+    "title": "Printer in building B not working",
+    "description": "The HP printer on the 3rd floor of building B is not printing. Error message says paper jam but we checked and there is no jam.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "Suspicious login attempts from unknown IPs",
+    "description": "Security team detected hundreds of failed login attempts from IPs in Russia and China. May indicate brute force attack in progress.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Core API returning 500 errors",
+    "description": "Our main customer-facing API is returning 500 errors for all requests. This affects the mobile app and web portal. Customers cannot place orders.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Minor typo on login page",
+    "description": "There is a typo on the login page - it says 'Sing In' instead of 'Sign In'. Can someone fix this when they have time?",
+    "severity": "low",
+    "category": "Software"
+  },
+  {
+    "title": "Email delivery delays",
+    "description": "Outgoing emails are being delayed by 2-4 hours. Some are not reaching recipients at all. Started affecting us this morning.",
+    "severity": "high",
+    "category": "Email"
+  },
+  {
+    "title": "Laptop won't connect to WiFi",
+    "description": "My laptop suddenly stopped connecting to the office WiFi. Other devices work fine. Tried restarting but no luck.",
+    "severity": "medium",
+    "category": "Network"
+  },
+  {
+    "title": "Need access to Salesforce",
+    "description": "I started last week and still don't have access to Salesforce. My manager approved it but I cannot log in.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Monitor flickering",
+    "description": "My second monitor is flickering occasionally. It's annoying but I can still work. Wondering if it needs replacement.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "URGENT!!! Application won't open",
+    "description": "I'm getting an error when I try to open the expense reporting app. It says 'application failed to start'. I have a report due!!!",
+    "severity": "medium",
+    "category": "Software"
+  },
+  {
+    "title": "Payment processing system down",
+    "description": "The payment gateway is not processing any transactions. Customers cannot complete purchases. We are losing revenue every minute.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Spam emails getting through",
+    "description": "We are receiving a lot of spam in our inboxes lately. The spam filter doesn't seem to be catching them. Can we tighten the filter?",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "DNS resolution failing intermittently",
+    "description": "Internal DNS is intermittently failing. Some users cannot resolve internal hostnames. Happens randomly throughout the day.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "Keyboard has sticky keys",
+    "description": "The 'E' key on my keyboard is sticking. I have to press it really hard. Can I get a replacement?",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "Customer data breach suspected",
+    "description": "We may have had a data breach. Customer PII might have been exposed. Legal and compliance are involved. Need immediate response.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Backup system failed last night",
+    "description": "The nightly backup job failed. Critical backup did not complete. We have no backup from last 24 hours.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Application slow to load",
+    "description": "The HR portal takes 2-3 minutes to load instead of the usual 10 seconds. It's usable but frustrating.",
+    "severity": "medium",
+    "category": "Software"
+  },
+  {
+    "title": "Request for admin rights",
+    "description": "I need admin rights on my workstation to install a development tool. My manager has approved. Please grant when possible.",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Cannot receive external emails",
+    "description": "We cannot receive emails from external domains. Sending works. This is blocking communication with clients and vendors.",
+    "severity": "high",
+    "category": "Email"
+  },
+  {
+    "title": "Firewall blocking legitimate traffic",
+    "description": "The new firewall rules are blocking our CRM API calls. Sales team cannot sync data. Started after last night's firewall update.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "Mouse cursor jumps around",
+    "description": "My wireless mouse cursor sometimes jumps to random places on the screen. Probably needs new batteries or a new mouse.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "CRITICAL - Production server unresponsive",
+    "description": "Our main production server is not responding. Website is down. Customers cannot access our service. This is a complete outage.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Password expired, need reset",
+    "description": "My password expired and I'm locked out. I need a reset to get back to work. Not urgent but I'm blocked.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Excel crashes when opening large file",
+    "description": "Excel crashes every time I try to open a file with more than 50,000 rows. I need to analyze this data for my report.",
+    "severity": "medium",
+    "category": "Software"
+  },
+  {
+    "title": "Phishing email reported",
+    "description": "Several employees received a suspicious email asking for credentials. They did not click. Should we be concerned?",
+    "severity": "high",
+    "category": "Security"
+  },
+  {
+    "title": "Internet slow in building A",
+    "description": "Internet is noticeably slow in building A. Pages take forever to load. Other buildings seem fine.",
+    "severity": "medium",
+    "category": "Network"
+  },
+  {
+    "title": "Need access to shared drive",
+    "description": "I need read access to the Marketing shared drive. My manager sent the request last week. Can someone approve?",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Email signature looks wrong",
+    "description": "My email signature has a wrong phone number. Can someone update it in the template? Not urgent.",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Server room temperature alarm",
+    "description": "AC unit in server room failed. Temperature is rising. Risk of hardware failure if not addressed soon.",
+    "severity": "critical",
+    "category": "Hardware"
+  },
+  {
+    "title": "Application shows wrong timezone",
+    "description": "The scheduling app shows times in PST but we're in EST. Causing confusion for meeting times. Need to fix.",
+    "severity": "medium",
+    "category": "Software"
+  },
+  {
+    "title": "Cannot connect to VPN from home",
+    "description": "I work from home and VPN has not been connecting for the past 2 days. I cannot access any work systems.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "Old account still active",
+    "description": "An employee who left 6 months ago still has an active account. We should disable it for security.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Email attachments not sending",
+    "description": "When I attach files larger than 5MB to emails, they fail to send. Getting an error about size limit.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Two-factor authentication not working",
+    "description": "2FA is not sending codes to my phone. I cannot log in to any system. I'm completely locked out.",
+    "severity": "high",
+    "category": "Security"
+  },
+  {
+    "title": "Desk phone not ringing",
+    "description": "My desk phone doesn't ring when someone calls. I can make outbound calls but miss all incoming. Very frustrating.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "E-commerce checkout broken",
+    "description": "Customers cannot complete checkout. The payment button does nothing when clicked. We are losing thousands per hour.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Calendar sync not working",
+    "description": "My Outlook calendar is not syncing with the shared team calendar. I'm missing meeting invites.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Switch port failure in data center",
+    "description": "A core switch port failed. Multiple servers lost connectivity. Affecting production and staging environments.",
+    "severity": "critical",
+    "category": "Network"
+  },
+  {
+    "title": "Can we get a different chair?",
+    "description": "My office chair is uncomfortable. I'd like to request an ergonomic chair. No rush, just when inventory is available.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "Suspicious process running on server",
+    "description": "We found an unknown process running on a production server. It's making outbound connections to an unknown IP. Could be malware.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Report generation failing",
+    "description": "The monthly report generator has been failing for 3 days. Finance needs the report by end of week. We have a workaround but it's slow.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "WiFi drops in conference room",
+    "description": "WiFi in the main conference room drops every 10-15 minutes. Makes meetings difficult. Other areas are fine.",
+    "severity": "medium",
+    "category": "Network"
+  },
+  {
+    "title": "Need to add user to distribution list",
+    "description": "Please add john.doe@company.com to the All-Employees distribution list. He started yesterday.",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "USB drive not recognized",
+    "description": "When I plug in my USB drive, it doesn't show up in File Explorer. Tried different ports. Other USB devices work.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "Emergency - All systems down",
+    "description": "The entire building has lost network connectivity. No one can access anything. This is a complete outage.",
+    "severity": "critical",
+    "category": "Network"
+  },
+  {
+    "title": "Application update broke our workflow",
+    "description": "The latest update to our workflow tool broke the approval process. No one can approve requests. We're stuck.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Request for software installation",
+    "description": "I need Python installed on my computer for a data analysis project. IT policy says I need to request it. Thanks!",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Certificate expired",
+    "description": "Our SSL certificate for the customer portal expired. Users are getting security warnings. We need to renew ASAP.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Email folder not showing",
+    "description": "One of my email folders disappeared from Outlook. I had important emails in there. Can we recover it?",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Laptop battery not holding charge",
+    "description": "My laptop battery dies after 30 minutes. I have to keep it plugged in. Can I get a replacement battery?",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "API rate limiting too aggressive",
+    "description": "Our API is rate limiting legitimate users too aggressively. Customers are getting 429 errors during normal operations.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Need access to HR system",
+    "description": "As a new manager I need access to the HR system to view my team's leave requests. Request was submitted 2 weeks ago.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Intrusion detection alert",
+    "description": "IDS flagged multiple port scans from an internal IP. Could indicate compromised machine. Need to investigate.",
+    "severity": "high",
+    "category": "Security"
+  },
+  {
+    "title": "Outlook keeps asking for password",
+    "description": "Outlook keeps prompting for my password every 10 minutes. I'm not changing it. Very disruptive.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Projector in room 301 not working",
+    "description": "The projector in conference room 301 won't turn on. We have a meeting in an hour. Can someone take a look?",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "Database queries timing out",
+    "description": "Complex database queries are timing out. Reports that used to run in seconds now fail. Affecting multiple departments.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "BGP routing issue",
+    "description": "We're seeing BGP routing anomalies. Some traffic is being routed through unexpected paths. Could be a misconfiguration.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "Disable account for contractor",
+    "description": "Contractor project ended. Please disable their account and remove access. No rush, just when you have time.",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Antivirus blocking legitimate software",
+    "description": "Our antivirus is flagging and blocking a legitimate development tool we use. It's a false positive. Need to whitelist.",
+    "severity": "medium",
+    "category": "Security"
+  },
+  {
+    "title": "Email bounce rate high",
+    "description": "Our marketing emails have a high bounce rate suddenly. Deliverability might be affected. Need to investigate.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Headset microphone not working",
+    "description": "The microphone on my headset stopped working. I can hear but others can't hear me. Tried different applications.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "CRITICAL - Customer data deleted",
+    "description": "A script accidentally deleted customer records from production. We need to restore from backup immediately. This is critical.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Application freezes on startup",
+    "description": "The design application freezes for 1-2 minutes when I first open it. After that it works fine. Annoying but manageable.",
+    "severity": "low",
+    "category": "Software"
+  },
+  {
+    "title": "Load balancer failing over",
+    "description": "The load balancer is failing over between nodes every few minutes. Causing brief outages. Need to stabilize.",
+    "severity": "critical",
+    "category": "Network"
+  },
+  {
+    "title": "New user onboarding - access setup",
+    "description": "We have 5 new hires starting Monday. Need accounts created with email, VPN, and standard apps. Please set up by Friday.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Unusual file access patterns",
+    "description": "We are seeing unusual access patterns to sensitive files. Someone accessing files at odd hours from an unusual location.",
+    "severity": "high",
+    "category": "Security"
+  },
+  {
+    "title": "Email rules not applying",
+    "description": "I set up email rules to auto-sort emails but they're not working. Some emails go to wrong folders. Can you help?",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Server disk space critical",
+    "description": "The main application server has less than 5% disk space left. If it fills up, the application will crash. Need to free space or add storage.",
+    "severity": "critical",
+    "category": "Hardware"
+  },
+  {
+    "title": "Bug in report export",
+    "description": "When I export the report to PDF, some charts are cut off. Excel export works fine. Need PDF for client presentation.",
+    "severity": "medium",
+    "category": "Software"
+  },
+  {
+    "title": "Latency spikes during peak hours",
+    "description": "We see latency spikes during 9-11 AM. Users report slow response times. Off-peak is fine.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "Permission change for folder",
+    "description": "I need to change permissions on the Projects folder so only my team can access it. Can someone update the ACL?",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security patch not applied",
+    "description": "Critical security patch for Windows was not applied to 50 workstations. They're vulnerable. Need to push ASAP.",
+    "severity": "high",
+    "category": "Security"
+  },
+  {
+    "title": "Auto-reply not working",
+    "description": "I set up an out-of-office auto-reply but it's not sending. I'm on vacation and people think I'm ignoring them.",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Docking station not detecting monitors",
+    "description": "My docking station stopped detecting my two external monitors. Laptop display works. Tried different cables.",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "Scheduled jobs not running",
+    "description": "Our scheduled batch jobs have stopped running. No data has been processed for 2 days. This affects downstream systems.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Help!!! Everything is broken!!!",
+    "description": "I can't find the print button in the new version of the app. It used to be in the top right. This is so frustrating! Please fix!!!",
+    "severity": "low",
+    "category": "Software"
+  },
+  {
+    "title": "CDN serving stale content",
+    "description": "Our CDN is serving cached old versions of our website. Users are seeing outdated content. Cache purge didn't fully work.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "SSO integration for new app",
+    "description": "We're deploying a new SaaS app and need SSO integration. Need it configured for 200 users by next month.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Malware detected on workstation",
+    "description": "Antivirus detected malware on a finance department workstation. Machine may have been compromised. Need to isolate and investigate.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Email threading broken",
+    "description": "Email threads are not grouping properly in Outlook. Replies are showing as separate emails. Makes it hard to follow conversations.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Webcam not working",
+    "description": "The built-in webcam on my laptop stopped working. Video calls show black screen. I need it for daily standups.",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "Memory leak in application",
+    "description": "Our main application has a memory leak. After running for 8 hours it consumes all RAM and crashes. We have to restart it daily.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Fiber cut - building offline",
+    "description": "Fiber line to our building was cut. Entire building has no internet. No ETA on repair from carrier.",
+    "severity": "critical",
+    "category": "Network"
+  },
+  {
+    "title": "Temporary access for auditor",
+    "description": "External auditor needs read-only access to our financial systems for 2 weeks. Request approved by compliance.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Privilege escalation vulnerability",
+    "description": "A privilege escalation vulnerability was found in our internal app. Attackers could gain admin access. Need to patch immediately.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Email quota exceeded",
+    "description": "My mailbox is full and I can't receive new emails. I've archived old emails but still over limit. Need quota increase.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Power supply failed on server",
+    "description": "One of the redundant power supplies failed on our database server. Running on single PSU. Need replacement before the other fails.",
+    "severity": "high",
+    "category": "Hardware"
+  },
+  {
+    "title": "Mobile app crash on login",
+    "description": "Our mobile app crashes immediately when users try to log in. Affecting 100% of iOS users. Android works fine.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Please help - urgent",
+    "description": "I need to change my desktop background to a company logo. The current one is boring. Can someone do this today? Thanks!",
+    "severity": "low",
+    "category": "Software"
+  },
+  {
+    "title": "Packet loss on WAN link",
+    "description": "We're seeing 15-20% packet loss on our primary WAN link. Voice calls are dropping. Video is pixelated.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "Bulk user creation",
+    "description": "We are migrating 100 users from another department. Need accounts created with same permissions as their current setup. Deadline in 2 weeks.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Encryption keys may be compromised",
+    "description": "We have reason to believe our encryption keys may have been compromised. Need to rotate keys and re-encrypt sensitive data.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Cannot find sent folder",
+    "description": "Where did my Sent folder go in the new email interface? I need to find an email I sent last week.",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "RAID array degraded",
+    "description": "One drive in our RAID array failed. Array is degraded. We have a spare but need to replace the failed drive before another fails.",
+    "severity": "critical",
+    "category": "Hardware"
+  },
+  {
+    "title": "Search feature not working",
+    "description": "The search feature in our knowledge base returns no results. Users cannot find documentation. Worked fine until yesterday.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "WiFi password not working",
+    "description": "The new WiFi password doesn't work on my phone. I can connect with my laptop. Maybe I typed it wrong? Can someone help?",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Role change - need permissions updated",
+    "description": "I was promoted to team lead. I need access to the same systems as my manager for approving requests. HR has processed the promotion.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Compliance audit - access review",
+    "description": "We need a report of all users with admin access for our compliance audit. Need it by end of week. No rush.",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email forwarding not working",
+    "description": "I set up email forwarding to my personal account but it's not working. I'm on leave and need to check work emails.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Fan noise from workstation",
+    "description": "My computer fan is very loud. It could be dust or failing fan. Can someone check? It's distracting but the computer still works.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "Order processing system down",
+    "description": "The order processing system cannot connect to the inventory database. No orders can be fulfilled. Warehouse is at a standstill.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Font size too small",
+    "description": "The font in the application is too small. I have to strain my eyes. Can we make it bigger? It's not urgent but would help.",
+    "severity": "low",
+    "category": "Software"
+  },
+  {
+    "title": "MPLS circuit down",
+    "description": "Our primary MPLS circuit to the data center is down. Failover to backup is slow. Critical systems are affected.",
+    "severity": "critical",
+    "category": "Network"
+  },
+  {
+    "title": "Password policy too strict",
+    "description": "The new password policy requires 16 characters with special chars. I keep getting locked out. Can we relax it a bit?",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Unencrypted data in transit",
+    "description": "We discovered that sensitive data is being transmitted without encryption between two internal systems. Compliance violation.",
+    "severity": "high",
+    "category": "Security"
+  },
+  {
+    "title": "Email delay - 1 hour",
+    "description": "Emails are being delayed by about an hour. Not critical but affecting our response times to customers.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Second monitor not detected",
+    "description": "My second monitor is not being detected. I've tried different cables and ports. Maybe the display port is broken?",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "API authentication failing",
+    "description": "Our partner API integration is failing authentication. All API calls return 401. This blocks our integration with their system.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Need to add someone to VPN",
+    "description": "New contractor needs VPN access. Can someone add them to the VPN user list? They start next Monday.",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "DDoS attack in progress",
+    "description": "We are under a DDoS attack. Website is unreachable. Traffic is 10x normal. Need to mitigate immediately.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Email formatting looks wrong",
+    "description": "When I send HTML emails, the formatting looks wrong on the recipient's side. Tables and images are broken.",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "UPS battery failing",
+    "description": "The UPS in the server room is reporting battery failure. Need to replace before we lose power protection.",
+    "severity": "high",
+    "category": "Hardware"
+  },
+  {
+    "title": "Session timeout too short",
+    "description": "Users are being logged out after 5 minutes of inactivity. They lose their work. Need to extend session timeout.",
+    "severity": "medium",
+    "category": "Software"
+  },
+  {
+    "title": "Network cable damaged",
+    "description": "Someone tripped over a cable and the connector is broken. Need a new cable to connect my workstation. Quick fix.",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Emergency - need immediate access",
+    "description": "I need access to the emergency contact list. I'm not sure if I have permission. Can someone grant it quickly? It's for a family emergency.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Logs show unauthorized access",
+    "description": "Access logs show someone accessed our internal wiki from an IP outside our VPN. Could be a compromised account.",
+    "severity": "high",
+    "category": "Security"
+  },
+  {
+    "title": "Calendar invite not received",
+    "description": "I didn't receive a calendar invite for an important meeting. I might have missed it. Can you resend?",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Server overheating",
+    "description": "Temperature sensors show our main app server is running at 85°C. Risk of thermal shutdown. Need to check cooling.",
+    "severity": "critical",
+    "category": "Hardware"
+  },
+  {
+    "title": "Import feature broken",
+    "description": "The CSV import feature is not working. It was working last week. We need to import 5000 records for a project.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "WiFi slow in cafeteria",
+    "description": "WiFi is really slow in the cafeteria during lunch. Probably too many people. Can we add another access point?",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Account locked - too many attempts",
+    "description": "I forgot my password and tried too many times. Now my account is locked. Can someone unlock it? I need to work.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security awareness training overdue",
+    "description": "Several employees have not completed security awareness training. Deadline was last month. Need to follow up.",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email merge fields wrong",
+    "description": "When we use mail merge, the merge fields show wrong data. Like first name shows last name. Need to fix template.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Laptop won't boot",
+    "description": "My laptop shows a blue screen on startup and won't boot. I have important files on it. Need help recovering.",
+    "severity": "high",
+    "category": "Hardware"
+  },
+  {
+    "title": "Real-time sync broken",
+    "description": "Real-time data sync between our systems has stopped. Data is stale. Users are seeing outdated information.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "VPN certificate expired",
+    "description": "The VPN certificate expired. No one can connect to VPN. All remote workers are blocked.",
+    "severity": "critical",
+    "category": "Network"
+  },
+  {
+    "title": "Request for guest WiFi",
+    "description": "We have visitors next week who need internet access. Can we set up temporary guest WiFi credentials?",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Backup encryption key lost",
+    "description": "We cannot decrypt our backup. The encryption key was lost. We may not be able to restore in case of disaster.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Email folder structure",
+    "description": "I want to reorganize my email folders. Can someone show me how to create subfolders and move emails?",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Printer out of toner",
+    "description": "The color printer in the lobby is out of toner. Can someone replace it? We have toner in the supply closet.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "Deployment pipeline broken",
+    "description": "Our CI/CD pipeline is broken. We cannot deploy to production. A critical bug fix is stuck. Need to fix pipeline.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Bandwidth limit exceeded",
+    "description": "We are hitting our bandwidth limit. Internet is throttled. Affecting all users. Need to upgrade or optimize.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "MFA reset for user",
+    "description": "User lost their phone and needs MFA reset. They're locked out of all systems. Can someone reset their 2FA?",
+    "severity": "high",
+    "category": "Access Request"
+  },
+  {
+    "title": "Vulnerability scan found critical issues",
+    "description": "Our quarterly vulnerability scan found 3 critical vulnerabilities. They need to be patched within 48 hours per policy.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Email retention policy",
+    "description": "I have a question about our email retention policy. How long do we keep emails? Need to know for a compliance question.",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "KVM switch not switching",
+    "description": "The KVM switch in the server room is not switching between servers. We have to use physical access. Annoying for maintenance.",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "Cache causing wrong data display",
+    "description": "Users are seeing cached data that's days old. Cache invalidation is not working. Need to fix or clear cache.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Redundant link failed",
+    "description": "Our redundant network link failed. We're on single path now. No outage but if primary fails we're down.",
+    "severity": "medium",
+    "category": "Network"
+  },
+  {
+    "title": "Need to extend access for contractor",
+    "description": "Contractor's project was extended. Their access was set to expire tomorrow. Can we extend it by 2 months?",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Default passwords still in use",
+    "description": "Audit found several devices still using default passwords. We need to change them before the next security review.",
+    "severity": "high",
+    "category": "Security"
+  },
+  {
+    "title": "Email attachment size limit",
+    "description": "What is the maximum attachment size for email? I need to send a large file to a client. Can we increase the limit?",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Blade server failed",
+    "description": "A blade in our chassis failed. We need to replace it. The application is running on remaining blades but we're at reduced capacity.",
+    "severity": "high",
+    "category": "Hardware"
+  },
+  {
+    "title": "Webhook delivery failing",
+    "description": "Our webhooks to external systems are failing. 90% failure rate. Integrations are broken. Customers are complaining.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "ASAP - need help",
+    "description": "I need to print a document. The print button is grayed out. I have a meeting in 5 minutes. Please help!!!",
+    "severity": "low",
+    "category": "Software"
+  },
+  {
+    "title": "QoS not prioritizing voice",
+    "description": "Voice traffic is not being prioritized. VoIP calls are dropping during peak usage. Need to fix QoS configuration.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "Remove access for contractor",
+    "description": "Contractor finished their project. Please remove their access to all systems. Should have been done last week.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Penetration test findings",
+    "description": "External pen test found we could exploit a vulnerability to access admin panel. Need to patch before report is finalized.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Email disclaimer",
+    "description": "Can we add a disclaimer to all outgoing emails? Legal wants a standard confidentiality notice. Not urgent.",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "NAS storage full",
+    "description": "The NAS for shared files is 95% full. Users cannot save new files. Need to clean up or add storage.",
+    "severity": "high",
+    "category": "Hardware"
+  },
+  {
+    "title": "Login redirect loop",
+    "description": "After login, users get redirected in a loop and never reach the dashboard. Affecting all new logins.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "DHCP pool exhausted",
+    "description": "Our DHCP pool ran out of IP addresses. New devices cannot get network access. Need to expand the pool.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "Access to legacy system",
+    "description": "We need to migrate data from a legacy system. Need temporary read access for the migration team. 2 week project.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security questionnaire",
+    "description": "We need to complete a security questionnaire for a new vendor. They're asking about our security practices. Need to gather info.",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email search slow",
+    "description": "Searching my email takes 30+ seconds. I have a lot of emails but it's never been this slow.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Scanner not scanning",
+    "description": "The document scanner in the copy room is not scanning. It copies fine but scan to email fails. Error message unclear.",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "Transaction rollback issue",
+    "description": "Database transactions are not rolling back properly on errors. We're seeing partial data commits. Could cause data corruption.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Please fix - urgent",
+    "description": "The coffee machine in the break room is not working. I really need my morning coffee. Can someone look at it? Thanks!",
+    "severity": "low",
+    "category": "Other"
+  },
+  {
+    "title": "NAT configuration wrong",
+    "description": "Our NAT configuration is causing some internal services to be unreachable from outside. Need to fix port forwarding.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "Service account password rotation",
+    "description": "We need to rotate our service account passwords. It's part of our quarterly security process. Need to coordinate with app teams.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "SIEM alert - impossible travel",
+    "description": "SIEM flagged impossible travel - same account logged in from US and Asia within 1 hour. Possible account compromise.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Email group membership",
+    "description": "I need to be added to the ProjectUpdates email group. My manager said to request it. Thanks!",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Server RAM upgrade",
+    "description": "We need to upgrade RAM on our database server. Current 32GB is not enough. We have the RAM, need someone to install.",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "File upload size limit",
+    "description": "Users cannot upload files larger than 10MB. We need to support 50MB for client deliverables. Need to increase limit.",
+    "severity": "medium",
+    "category": "Software"
+  },
+  {
+    "title": "VLAN misconfiguration",
+    "description": "A VLAN was misconfigured and devices are getting wrong IP ranges. Some devices cannot reach the gateway.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "Offboarding checklist",
+    "description": "Employee is leaving Friday. Need to run through offboarding checklist - disable accounts, collect equipment, etc.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security awareness training",
+    "description": "When is the next security awareness training? I want to sign up. Just curious.",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email on mobile",
+    "description": "How do I set up my work email on my personal phone? I want to check emails when I'm not at my desk.",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Replace aging workstations",
+    "description": "We have 20 workstations that are 7 years old. They're slow and failing. Need to plan replacement. Budget approved.",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "Null pointer in production",
+    "description": "We're getting null pointer exceptions in production. Application is crashing for random users. Started after last deployment.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "URGENT!!! Screen broken",
+    "description": "I accidentally dropped my coffee on my laptop. The screen has a crack now. I need a replacement ASAP!!! This is terrible!!!",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "BGP hijacking attempt",
+    "description": "We detected a possible BGP hijacking attempt. Our routes were briefly advertised incorrectly. Need to investigate.",
+    "severity": "critical",
+    "category": "Network"
+  },
+  {
+    "title": "Create service account",
+    "description": "We need a new service account for our deployment automation. It needs minimal permissions. Just for CI/CD.",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "SOC2 compliance review",
+    "description": "We have a SOC2 audit in 2 months. Need to ensure our access controls are documented. Can we schedule a review?",
+    "severity": "medium",
+    "category": "Security"
+  },
+  {
+    "title": "Email bounce - domain not found",
+    "description": "We're getting bounces when emailing to our partner domain. Says domain not found. DNS issue on their side?",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Replace failed hard drive",
+    "description": "A hard drive failed in my workstation. I have a spare. Can someone help me replace it? I'm not comfortable opening the case.",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "Race condition in payment processing",
+    "description": "We found a race condition. Under load, some payments are processed twice. We've had duplicate charges. Need to fix.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "WiFi coverage in lobby",
+    "description": "WiFi in the main lobby is weak. Visitors complain they can't get online. Can we add an access point?",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Emergency access request",
+    "description": "CEO needs access to the financial report. Their account doesn't have permission. Can we grant temporary access? It's urgent.",
+    "severity": "high",
+    "category": "Access Request"
+  },
+  {
+    "title": "Phishing simulation results",
+    "description": "Our phishing simulation had 15% click rate. Higher than last quarter. Need to improve training. Not urgent.",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email sync with phone",
+    "description": "My work email stopped syncing to my phone. I didn't change anything. Can you check?",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Replace projector bulb",
+    "description": "The projector in the main conference room needs a new bulb. It's dim. We have a spare bulb in storage.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "Infinite loop in report generation",
+    "description": "The monthly report generator gets stuck in an infinite loop for certain date ranges. We have to kill the process. Need to fix.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "DNS propagation issues",
+    "description": "We changed our DNS and some users still see old records. Propagation taking longer than expected. Affecting new deployments.",
+    "severity": "medium",
+    "category": "Network"
+  },
+  {
+    "title": "Bulk permission update",
+    "description": "We need to add 50 users to a new shared folder. Can we do it in bulk? They're all in the same department.",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Firewall rule audit",
+    "description": "We need to audit our firewall rules. Some might be obsolete. Planning to do it next quarter.",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email signature image",
+    "description": "The logo in my email signature is broken - shows as red X. Can someone fix the image link?",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "UPS beeping",
+    "description": "The UPS under my desk is beeping. It says replace battery but I'm not sure. Is it urgent?",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "API returning 500 for all requests",
+    "description": "Our public API started returning 500 for all requests 30 minutes ago. All third-party integrations are down. Customers are calling.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Network cable unplugged",
+    "description": "I think someone unplugged my network cable. I have no connection. Can someone check the jack?",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Access to payroll system",
+    "description": "Need to grant access to payroll system for new HR manager. They started today. Request approved.",
+    "severity": "high",
+    "category": "Access Request"
+  },
+  {
+    "title": "Credential stuffing detected",
+    "description": "We're seeing credential stuffing attacks. Attackers using leaked passwords to try to access accounts. Need to block and notify users.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Email folder permissions",
+    "description": "I need to share my email folder with my assistant. How do I set permissions in Outlook?",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Laptop won't charge",
+    "description": "My laptop is not charging. The charger might be faulty. Battery is at 10%. I need to work.",
+    "severity": "high",
+    "category": "Hardware"
+  },
+  {
+    "title": "Session hijacking vulnerability",
+    "description": "Security researcher reported session hijacking vulnerability. Attackers could steal user sessions. We need to fix and deploy patch.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Please help - ASAP",
+    "description": "I want to change my desktop wallpaper to a picture of my dog. Can someone show me how? It would make me so happy!",
+    "severity": "low",
+    "category": "Software"
+  },
+  {
+    "title": "Routing loop detected",
+    "description": "We have a routing loop. Traffic is bouncing between two routers. Causing network congestion and packet loss.",
+    "severity": "critical",
+    "category": "Network"
+  },
+  {
+    "title": "Disable account - employee terminated",
+    "description": "Employee was terminated today. Need to disable their account immediately. They should not have any access.",
+    "severity": "critical",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security patch Tuesday",
+    "description": "Microsoft released patches. We need to deploy to workstations. Can we schedule for this weekend?",
+    "severity": "medium",
+    "category": "Security"
+  },
+  {
+    "title": "Email not loading",
+    "description": "Outlook is not loading my emails. It's stuck on the loading screen. I've restarted Outlook. Still same issue.",
+    "severity": "high",
+    "category": "Email"
+  },
+  {
+    "title": "Replace keyboard",
+    "description": "I spilled water on my keyboard. Some keys don't work. Can I get a replacement? I'm using an old spare for now.",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "Data export failing",
+    "description": "The data export feature fails for exports over 100MB. We need to export 500MB for our client. Can we fix or increase limit?",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "WiFi drops when moving",
+    "description": "My laptop loses WiFi when I walk from my desk to the meeting room. Have to reconnect. Is this normal?",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Need elevated permissions",
+    "description": "I need temporary admin access to fix a configuration issue on my machine. I know what I'm doing. Just need the rights.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Password spray attack",
+    "description": "We're seeing password spray attacks - same password tried across many accounts. Need to implement lockout and alert.",
+    "severity": "high",
+    "category": "Security"
+  },
+  {
+    "title": "Email rules not running",
+    "description": "I have a rule to move emails to a folder but it's not working. I've checked the rule and it looks correct.",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Server room humidity high",
+    "description": "Humidity in server room is at 85%. Risk of condensation and equipment damage. Need to check HVAC.",
+    "severity": "critical",
+    "category": "Hardware"
+  },
+  {
+    "title": "Application timeout",
+    "description": "Our application times out after 30 seconds. Users lose their work. Need to increase timeout or fix the slow queries.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Port conflict",
+    "description": "We have a port conflict on our application server. Two services trying to use port 443. One is failing to start.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "New department - need access",
+    "description": "We're standing up a new department. 20 people need access to our standard systems. Can we bulk create?",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security awareness - reminder",
+    "description": "Can we send a reminder to people who haven't completed security training? The deadline is approaching.",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email categories",
+    "description": "How do I set up email categories in Outlook? I want to color-code my emails. Can someone show me?",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Replace failed drive in NAS",
+    "description": "One drive in our NAS failed. We have hot spare. Can someone replace the failed drive? Array is degraded.",
+    "severity": "high",
+    "category": "Hardware"
+  },
+  {
+    "title": "OAuth token expiration",
+    "description": "Our OAuth tokens are expiring too quickly. Users have to re-authenticate every hour. Very disruptive.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Subnet running out of IPs",
+    "description": "Our main subnet is running out of available IPs. Need to expand or add new subnet. Planning for growth.",
+    "severity": "medium",
+    "category": "Network"
+  },
+  {
+    "title": "Access to legacy application",
+    "description": "We need to migrate from legacy app. Need read-only access for 3 people for 1 month. Migration project.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security incident - USB device",
+    "description": "Employee plugged in unknown USB device. It may have contained malware. Machine isolated. Need to scan.",
+    "severity": "high",
+    "category": "Security"
+  },
+  {
+    "title": "Email reply all",
+    "description": "I accidentally did reply all to a sensitive email. Can we recall it? I sent it 5 minutes ago.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Cooling fan failed",
+    "description": "The cooling fan in our backup server failed. Server is overheating. We need to replace the fan before we lose the server.",
+    "severity": "high",
+    "category": "Hardware"
+  },
+  {
+    "title": "Deadlock in database",
+    "description": "We're seeing database deadlocks. Queries are blocking each other. Application is hanging. Need to fix transaction logic.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "EMERGENCY - need help now",
+    "description": "The vending machine is out of my favorite chips. I need them for my afternoon snack. Can someone restock? Please!!!",
+    "severity": "low",
+    "category": "Other"
+  },
+  {
+    "title": "Firewall blocking backup",
+    "description": "Our backup to offsite is failing. Firewall might be blocking the connection. Need to check rules.",
+    "severity": "high",
+    "category": "Network"
+  },
+  {
+    "title": "Password policy exception",
+    "description": "We have a legacy system that doesn't support our new password policy. Need exception for 10 service accounts.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Ransomware simulation",
+    "description": "We want to run a ransomware simulation to test our response. Need to schedule with IT. Planning for next quarter.",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email archive",
+    "description": "I need to archive old emails to free up space. How do I do that? I have 5 years of emails.",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Replace failed PSU",
+    "description": "Power supply failed on our web server. We have a spare. Need to replace before we lose redundancy.",
+    "severity": "critical",
+    "category": "Hardware"
+  },
+  {
+    "title": "Memory leak in background job",
+    "description": "Our background job process has a memory leak. It grows from 2GB to 16GB over 24 hours. We restart it daily.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Network segmentation",
+    "description": "We need to segment our network for better security. Need to plan VLANs and firewall rules. Project for next year.",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Federated access",
+    "description": "We're integrating with a partner. Need to set up federated access for their users. SAML configuration.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security baseline",
+    "description": "We need to document our security baseline for compliance. What policies do we have? Need to compile.",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email forwarding rules",
+    "description": "I'm going on leave. Can we set up automatic reply and forwarding to my backup? Just for 2 weeks.",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Server memory upgrade",
+    "description": "We need to upgrade memory on our application server. We have the RAM. Need to schedule maintenance window.",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "CORS configuration wrong",
+    "description": "Our API is rejecting requests from our frontend. CORS error. Users cannot use the web app. Need to fix CORS config.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Network diagram",
+    "description": "Do we have an updated network diagram? I need it for a presentation. Can someone share?",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Service account access",
+    "description": "Our deployment service account needs access to our new staging environment. Need to add to the right groups.",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security review for new app",
+    "description": "We're deploying a new application. Need security review before go-live. Can we schedule?",
+    "severity": "medium",
+    "category": "Security"
+  },
+  {
+    "title": "Email threading",
+    "description": "Email threads are not grouping correctly. Replies are separate. Makes it hard to follow. Is this a known issue?",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Replace failed disk",
+    "description": "A disk failed in our storage array. We have hot spare. Need to replace the failed disk. Array is degraded.",
+    "severity": "high",
+    "category": "Hardware"
+  },
+  {
+    "title": "GraphQL query timeout",
+    "description": "Our GraphQL API times out on complex queries. Need to optimize or add pagination. Affecting our mobile app.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "WiFi password change",
+    "description": "We need to change the WiFi password. Old one may have been shared. When can we do it?",
+    "severity": "medium",
+    "category": "Network"
+  },
+  {
+    "title": "Access to analytics",
+    "description": "Marketing team needs access to our analytics dashboard. Read-only. Can we grant? Manager approved.",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security headers",
+    "description": "Our security scan says we're missing some headers. X-Frame-Options, etc. Need to add to our web server config.",
+    "severity": "medium",
+    "category": "Security"
+  },
+  {
+    "title": "Email retention",
+    "description": "How long do we keep deleted emails? I deleted something by accident and need to recover. Can we?",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Replace failed NIC",
+    "description": "Network card failed on our database server. We're on the backup NIC. Need to replace the failed one.",
+    "severity": "high",
+    "category": "Hardware"
+  },
+  {
+    "title": "WebSocket connection drops",
+    "description": "WebSocket connections drop after 5 minutes. Our real-time feature is broken. Users have to refresh constantly.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "IP conflict",
+    "description": "Two devices have the same IP. Causing network issues. Need to find and fix the conflict.",
+    "severity": "medium",
+    "category": "Network"
+  },
+  {
+    "title": "Need access to CRM",
+    "description": "New sales rep needs access to Salesforce. Can someone create their account? They start tomorrow.",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security training completion",
+    "description": "I completed security training. Can you confirm it's recorded? I need the certificate for compliance.",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email spam filter",
+    "description": "Legitimate emails are going to spam. Can we whitelist our partner's domain? They're important.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Replace failed RAM",
+    "description": "We have a RAM module that's failing. ECC errors. Need to replace. Server is still running but degraded.",
+    "severity": "high",
+    "category": "Hardware"
+  },
+  {
+    "title": "Rate limiting too strict",
+    "description": "Our API rate limit is too strict. Legitimate users are getting blocked. Need to increase or implement per-user limits.",
+    "severity": "medium",
+    "category": "Software"
+  },
+  {
+    "title": "Network monitoring",
+    "description": "Our network monitoring is showing alerts. Can someone check if they're real or false positives? Lots of noise.",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Emergency access",
+    "description": "I need emergency access to the building system. Someone is stuck in the elevator. Need to override.",
+    "severity": "critical",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security patch - critical",
+    "description": "Zero-day vulnerability was disclosed. We need to patch all affected systems. Affects our Linux servers.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Email migration",
+    "description": "We're migrating to new email system. When will it happen? Will we lose any emails? Need to plan.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Replace failed motherboard",
+    "description": "Our file server motherboard failed. Need to replace. We have a spare server. Need to migrate data.",
+    "severity": "critical",
+    "category": "Hardware"
+  },
+  {
+    "title": "Application crash on startup",
+    "description": "Our application crashes on startup for 10% of users. We can't reproduce locally. Need to fix.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Network cable damaged",
+    "description": "Someone ran over a network cable with a chair. The cable is damaged. Need a new one. Quick fix.",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Access to payroll",
+    "description": "Payroll manager needs access to run payroll. Their account was locked. Need to unlock urgently. Payroll is tomorrow.",
+    "severity": "critical",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security audit",
+    "description": "We have a security audit next week. Need to prepare documentation. Can we get a checklist?",
+    "severity": "medium",
+    "category": "Security"
+  },
+  {
+    "title": "Email sync with calendar",
+    "description": "My email and calendar are not syncing. Meeting invites don't show in calendar. Using Outlook.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Replace failed CPU",
+    "description": "CPU fan failed, CPU overheated. Server shut down. Need to replace fan and check CPU. May need new server.",
+    "severity": "critical",
+    "category": "Hardware"
+  },
+  {
+    "title": "Application shows 404",
+    "description": "Our application shows 404 for all pages after deployment. Routing is broken. Need to rollback or fix.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "WiFi in parking",
+    "description": "Can we extend WiFi to the parking lot? I'd like to work from my car sometimes. Just asking.",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Access to admin panel",
+    "description": "I need admin access to our internal tool. I'm the product owner. Need to manage users.",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security awareness training",
+    "description": "When is the next security awareness training? I want to attend. Need to schedule.",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email attachment blocked",
+    "description": "I cannot send an attachment. Says it's blocked. It's a PDF. Is there a file type restriction?",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Replace failed drive",
+    "description": "A drive failed in our backup server. Need to replace. Server is still running. We have spare.",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "Application slow",
+    "description": "The application is slow. It takes 2 minutes to load a page. Used to be instant. Started this week.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Network maintenance",
+    "description": "When is the next network maintenance window? We need to plan our deployment. Need to avoid conflicts.",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Access to reporting",
+    "description": "I need access to the executive reporting dashboard. My manager approved. Can we set it up?",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security incident response",
+    "description": "We may have had a security incident. Need to follow incident response process. Who do we contact?",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Email folder full",
+    "description": "My Sent folder is full. I can't send more emails. Need to archive or increase limit.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Replace failed component",
+    "description": "A component failed in our server. Can we get a replacement? Need to identify the part first.",
+    "severity": "medium",
+    "category": "Hardware"
+  },
+  {
+    "title": "Application error",
+    "description": "Users are getting 'Application Error' message. Random. We can't reproduce. Need to check logs.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Network slow",
+    "description": "Network seems slow today. Maybe it's just me. Can someone check if there are any issues?",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Access to database",
+    "description": "Developer needs read access to production database for debugging. One-time. Manager approved.",
+    "severity": "high",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security policy",
+    "description": "I have a question about our password policy. How often do we need to change? Just curious.",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email not sending",
+    "description": "My emails are not sending. They stay in Outbox. I've tried different recipients. Same issue.",
+    "severity": "high",
+    "category": "Email"
+  },
+  {
+    "title": "Replace keyboard",
+    "description": "My keyboard has a broken key. Can I get a replacement? I'm using an old one for now.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "Application down",
+    "description": "Our primary application is down. Users cannot access. We've tried restarting. Still down.",
+    "severity": "critical",
+    "category": "Software"
+  },
+  {
+    "title": "Network down",
+    "description": "The entire network is down. No one in the building has connectivity. This is a complete outage.",
+    "severity": "critical",
+    "category": "Network"
+  },
+  {
+    "title": "Access revoked",
+    "description": "My access was revoked. I think by mistake. I need it for my job. Can someone restore?",
+    "severity": "high",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security breach",
+    "description": "We may have had a data breach. Customer data might be exposed. Need to investigate immediately.",
+    "severity": "critical",
+    "category": "Security"
+  },
+  {
+    "title": "Email down",
+    "description": "The entire email system is down. No one can send or receive. This is a complete outage.",
+    "severity": "critical",
+    "category": "Email"
+  },
+  {
+    "title": "Replace laptop",
+    "description": "My laptop is 5 years old. It's slow. Can I get a replacement? I've submitted the request.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "Application bug",
+    "description": "There's a bug in the application. When I click Save, it doesn't save. I lose my work. Very frustrating.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Network issue",
+    "description": "I'm having network issues. Can't connect to some internal sites. Other sites work. Weird.",
+    "severity": "medium",
+    "category": "Network"
+  },
+  {
+    "title": "Access request",
+    "description": "I need access to the shared drive. My manager said to request it. Thanks!",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security update",
+    "description": "When is the next security update? I want to make sure my system is patched.",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email issue",
+    "description": "I'm having an issue with my email. Can someone help? Not sure what's wrong.",
+    "severity": "medium",
+    "category": "Email"
+  },
+  {
+    "title": "Replace monitor",
+    "description": "My monitor has a dead pixel. Can I get a replacement? It's annoying but I can still work.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "Application request",
+    "description": "Can we add a feature to the application? I'd like to export to PDF. Not urgent.",
+    "severity": "low",
+    "category": "Software"
+  },
+  {
+    "title": "Network request",
+    "description": "Can we add a new network printer? I need to print from the 4th floor.",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Access to system",
+    "description": "I need access to the new system. I'm on the project team. Can someone grant it?",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security question",
+    "description": "I have a question about our security policy. Can someone explain?",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email question",
+    "description": "How do I set up an out of office message? I'm going on vacation.",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Hardware request",
+    "description": "Can I get a new mouse? Mine is old and the scroll wheel is broken.",
+    "severity": "low",
+    "category": "Hardware"
+  },
+  {
+    "title": "Software request",
+    "description": "Can we install a new software? I need it for a project. Not urgent.",
+    "severity": "low",
+    "category": "Software"
+  },
+  {
+    "title": "Network request",
+    "description": "Can we improve the WiFi in the basement? It's weak down there.",
+    "severity": "low",
+    "category": "Network"
+  },
+  {
+    "title": "Access request",
+    "description": "I need access to the project folder. Can someone grant it? Thanks!",
+    "severity": "low",
+    "category": "Access Request"
+  },
+  {
+    "title": "Security request",
+    "description": "I need to complete security training. Can someone send me the link?",
+    "severity": "low",
+    "category": "Security"
+  },
+  {
+    "title": "Email request",
+    "description": "Can we add a signature to my email? I need to add my title.",
+    "severity": "low",
+    "category": "Email"
+  },
+  {
+    "title": "Office supplies",
+    "description": "We're out of staples in the supply room. Can someone order more? Not urgent.",
+    "severity": "low",
+    "category": "Other"
+  },
+  {
+    "title": "Temperature in office",
+    "description": "The AC is not working in our area. It's too hot. Can someone fix it?",
+    "severity": "medium",
+    "category": "Other"
+  },
+  {
+    "title": "Parking pass",
+    "description": "I need a new parking pass. Mine expired. Can someone help?",
+    "severity": "low",
+    "category": "Other"
+  },
+  {
+    "title": "Badge access",
+    "description": "My badge doesn't work for the server room. I need access for maintenance. Can we update?",
+    "severity": "medium",
+    "category": "Access Request"
+  },
+  {
+    "title": "Meeting room booking",
+    "description": "The meeting room booking system is not working. I can't reserve a room. Need it for tomorrow.",
+    "severity": "medium",
+    "category": "Software"
+  },
+  {
+    "title": "Time tracking",
+    "description": "The time tracking system is down. I can't log my hours. Payroll needs it by Friday.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Expense system",
+    "description": "I can't submit my expense report. The system keeps failing. I need my reimbursement.",
+    "severity": "medium",
+    "category": "Software"
+  },
+  {
+    "title": "HR portal",
+    "description": "The HR portal is not loading. I need to update my benefits. Open enrollment ends soon.",
+    "severity": "high",
+    "category": "Software"
+  },
+  {
+    "title": "Intranet down",
+    "description": "The company intranet is down. We can't access policies or forms. Need it for onboarding.",
+    "severity": "medium",
+    "category": "Software"
+  }
+]
