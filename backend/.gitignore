@@ -59,3 +59,36 @@ Thumbs.db
 
 # Distribution / packaging
 *.whl
+
+# Model weights (large binaries - use Hugging Face Hub or DVC for versioning)
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.onnx
+
+# Training checkpoints (regenerable)
+**/checkpoint-*/
+**/checkpoints/
+
+# TensorBoard / experiment logs
+**/runs/
+runs/
+wandb/
+mlruns/
+lightning_logs/
+
+# Cached model downloads (Hugging Face cache)
+.cache/
+**/hub/
+
+# Large datasets (keep small samples; use DVC/LFS for full datasets)
+# Uncomment if tickets_dataset.json is large or sensitive:
+# model/dataset/*.json
+# model/dataset/*.csv
+# model/dataset/*.parquet
