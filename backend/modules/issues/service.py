@@ -1,11 +1,16 @@
 from flask import Flask
 
+from modules.nlp import predict_severity_and_category
+
+
 class IssueService:
     def __init__(self, issue_repo):
         self.issue_repo = issue_repo
     
     def create_ticket(self, title, category, description, submitted_by):
-        return self.issue_repo.create_ticket(title, category, description, submitted_by)
+        predictions = predict_severity_and_category(title, description)
+        severity = predictions["severity"]
+        return self.issue_repo.create_ticket(title, category, description, submitted_by, severity=severity)
 
     def get_all_user_tickets(self, user_id, submitted_by):
         if user_id != submitted_by:
