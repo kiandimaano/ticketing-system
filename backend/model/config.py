@@ -6,6 +6,7 @@ from pathlib import Path
 # Data
 DATA_PATH = Path("dataset/tickets_dataset.json")
 SEVERITY_COL = "severity"
+CATEGORY_COL = "category"
 TITLE_COL = "title"
 DESC_COL = "description"
 

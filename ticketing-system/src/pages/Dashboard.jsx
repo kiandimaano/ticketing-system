@@ -57,7 +57,7 @@ export default function Dashboard() {
                             onDismiss={handleDismiss}
                         />
                     )}
-                    <div className="grid grid-cols-3 gap-4">
+                    {/**<div className="grid grid-cols-3 gap-4">
                         <CardSmall
                             title="Unresolved Tickets"
                             description="100"
@@ -73,7 +73,7 @@ export default function Dashboard() {
                             description="200"
                             content="Tickets submitted the past 90 days"
                         />
-                    </div>
+                    </div> **/}
                     <div className="mt-8 rounded-xl border border-border bg-card shadow-sm">
                         <h2 className="border-b border-border bg-background py-4 text-center text-xl font-semibold text-foreground">
                             Create Support Ticket

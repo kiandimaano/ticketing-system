@@ -12,6 +12,9 @@ class IssueService:
         severity = predictions["severity"]
         return self.issue_repo.create_ticket(title, category, description, submitted_by, severity=severity)
 
+    def update_ticket_status(self, ticket_id, status):
+        return self.issue_repo.update_ticket_status(ticket_id, status)
+
     def get_all_user_tickets(self, user_id, submitted_by):
         if user_id != submitted_by:
             raise ValueError('Unauthorized access')

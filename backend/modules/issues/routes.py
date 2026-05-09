@@ -45,6 +45,23 @@ def create_ticket():
         except Exception as e:
             return jsonify({'message': str(e)}), 500
 
+@issues_bp.route('/update_ticket_status', methods=['PATCH'])
+def update_ticket_status():
+    if request.method == 'PATCH':
+        user_id = get_current_user_id()
+        if not user_id:
+            return jsonify({'message': 'Authentication required'}), 401
+
+        data = request.get_json()
+        if not data or 'ticket_id' not in data or 'status' not in data:
+            return jsonify({'message': 'ticket_id and status are required'}), 400
+        
+        try:
+            service.update_ticket_status(ticket_id = data['ticket_id'], status = data['status'])
+            return jsonify({'message': 'Ticket status changed successfully'}), 201
+        except Exception as e:
+            return jsonify({'message': str(e)}), 500
+
 @issues_bp.route('/get_all_user_tickets', methods=['GET'])
 def get_all_user_tickets():
     if request.method == 'GET':

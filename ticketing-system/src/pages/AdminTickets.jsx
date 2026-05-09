@@ -101,6 +101,34 @@ export default function AdminTickets() {
     loadTickets();
   }, []);
 
+  const handleStatusChange = async (ticketId, newStatus) => {
+    const token = getToken();
+    if (!token) return;
+
+    try {
+      await axios.patch(`${BACKEND_URL}/api/issues/update_ticket_status`, {
+        ticket_id: ticketId,
+        status: newStatus
+      }, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+      setTickets((prevTickets) =>
+        prevTickets.map((t) =>
+          t.id === ticketId ? { ...t, status: newStatus } : t
+        )
+      );
+
+      if (detailTicket && detailTicket.id === ticketId) {
+        setDetailTicket((prev) => ({ ...prev, status: newStatus }));
+      }
+
+    } catch (err) {
+      console.error('Failed to update ticket status', err);
+      alert(err.response?.data?.message || 'Failed to update status');
+    }
+  }
+
   const filteredTickets = tickets.filter((ticket) => {
     const matchesStatus =
       statusFilter === 'all' || ticket.status === statusFilter;
@@ -231,18 +259,21 @@ export default function AdminTickets() {
                         <span className="font-mono text-sm font-medium text-muted-foreground">
                           {ticket.id}
                         </span>
-                        <span
-                          className={cn(
-                            'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium',
-                            statusStyles[ticket.status]
-                          )}
-                        >
-                          {ticket.status === 'in_progress'
-                            ? 'In Progress'
-                            : ticket.status === 'open'
-                              ? 'Open'
-                              : 'Resolved'}
-                        </span>
+                        <div className="relative inline-flex">
+                          <select
+                            value={ticket.status}
+                            onChange={(e) => handleStatusChange(ticket.id, e.target.value)}
+                            className={cn(
+                              'appearance-none cursor-pointer items-center rounded-full border px-2.5 py-0.5 pr-6 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-ring',
+                              statusStyles[ticket.status]
+                            )}
+                          >
+                            <option value="open">Open</option>
+                            <option value="in_progress">In Progress</option>
+                            <option value="resolved">Resolved</option>
+                          </select>
+                          <ChevronDown className="pointer-events-none absolute right-1.5 top-1/2 size-3 -translate-y-1/2 opacity-60" aria-hidden />
+                        </div>
                         {ticket.severity && (
                           <span
                             className={cn(
@@ -337,18 +368,21 @@ export default function AdminTickets() {
                 <div>
                   <dt className="font-medium text-muted-foreground">Status</dt>
                   <dd className="mt-0.5">
-                    <span
-                      className={cn(
-                        'inline-flex rounded-full border px-2.5 py-0.5 text-xs font-medium',
-                        statusStyles[detailTicket.status]
-                      )}
-                    >
-                      {detailTicket.status === 'in_progress'
-                        ? 'In Progress'
-                        : detailTicket.status === 'open'
-                          ? 'Open'
-                          : 'Resolved'}
-                    </span>
+                    <div className="relative inline-flex">
+                      <select
+                        value={detailTicket.status}
+                        onChange={(e) => handleStatusChange(detailTicket.id, e.target.value)}
+                        className={cn(
+                          'appearance-none cursor-pointer items-center rounded-full border px-2.5 py-0.5 pr-6 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-ring',
+                          statusStyles[detailTicket.status]
+                        )}
+                      >
+                        <option value="open">Open</option>
+                        <option value="in_progress">In Progress</option>
+                        <option value="resolved">Resolved</option>
+                      </select>
+                      <ChevronDown className="pointer-events-none absolute right-1.5 top-1/2 size-3 -translate-y-1/2 opacity-60" aria-hidden />
+                    </div>
                   </dd>
                 </div>
                 <div>
